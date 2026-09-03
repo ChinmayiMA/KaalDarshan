@@ -1,57 +1,412 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KaalDarshan — Past Connects. History Lives.</title>
-<style>
-:root{--bg:#080807;--panel:#11100e;--gold:#d8ad58;--cream:#f4ead7;--muted:#b8ad9b;--line:#3b2d19}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font:16px/1.6 Inter,system-ui,sans-serif}
-nav{position:fixed;z-index:10;top:0;width:100%;padding:14px 6vw;display:flex;align-items:center;justify-content:space-between;background:#080807cc;backdrop-filter:blur(12px);border-bottom:1px solid #3b2d1944}
-.brand{display:flex;align-items:center;gap:12px;color:var(--cream);text-decoration:none;font-weight:800;letter-spacing:.14em}.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover}
-.links{display:flex;gap:28px}.links a{color:var(--muted);text-decoration:none;font-size:14px}.links a:hover{color:var(--gold)}
-.btn{display:inline-block;padding:12px 19px;border-radius:99px;text-decoration:none;font-weight:800;border:1px solid var(--gold)}.primary{background:var(--gold);color:#090806}.ghost{color:var(--gold);background:transparent}
-.hero{min-height:100vh;padding:140px 7vw 80px;display:grid;place-items:center;background:radial-gradient(circle at 78% 35%,#d8ad5822,transparent 30%),radial-gradient(circle at 15% 70%,#d8ad5810,transparent 28%)}
-.wrap{max-width:1180px;width:100%;margin:auto}.heroGrid,.two{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.24em;color:var(--gold);font-size:12px;font-weight:800;margin-bottom:18px}
-h1,h2{font-family:Georgia,serif;line-height:.98;margin:0 0 20px}h1{font-size:clamp(55px,8vw,105px);letter-spacing:-.05em}h2{font-size:clamp(40px,5vw,64px)}.gold{color:#f0cf86}p{color:var(--muted);font-size:18px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.logoCard{padding:18px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#ffffff0b,#d8ad5806);box-shadow:0 30px 90px #0008}.logoCard img{width:100%;display:block;border-radius:18px}
-section{padding:110px 7vw}.head{max-width:760px;margin-bottom:45px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#15120e,#0d0c0a)}.num{color:var(--gold);font:34px Georgia;margin-bottom:14px}.card h3{margin:0 0 7px;font-size:20px}.card p{font-size:15px;margin:0}
-.feature{background:linear-gradient(110deg,#11100e,#19130d)}.steps{margin-top:25px}.step{display:flex;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}.step b{color:var(--cream)}.step span{color:var(--gold);font-weight:800}
-.arch{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.arch div{text-align:center;padding:22px;border:1px solid var(--line);border-radius:18px}.arch span{display:block;color:var(--muted);font-size:13px;margin-top:5px}
-.quote{border-left:2px solid var(--gold);padding:15px 0 15px 24px;color:#f0cf86;font:25px Georgia;margin-bottom:20px}
-.cta{margin:0 7vw 90px;padding:70px 7vw;text-align:center;border:1px solid var(--line);border-radius:30px;background:radial-gradient(circle at 80% 20%,#d8ad5820,transparent 35%),#100f0d}.cta p{max-width:650px;margin:0 auto 25px}
-footer{padding:28px 7vw;border-top:1px solid var(--line);color:#887e70;display:flex;justify-content:space-between;font-size:13px}
-@media(max-width:850px){.links{display:none}.heroGrid,.two{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.arch{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){section{padding:80px 6vw}.hero{padding-left:6vw;padding-right:6vw}h1{font-size:58px}.arch{grid-template-columns:1fr}footer{display:block}}
-</style></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>KaalDarshan — Past Connects. History Lives.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
-<nav><a class="brand" href="#top"><img src="kaaldarshan-logo.jpeg"><span>KAALDARSHAN</span></a>
-<div class="links"><a href="#vision">Vision</a><a href="#experience">Experience</a><a href="#technology">Technology</a><a href="#impact">Impact</a></div>
-<a class="btn ghost" href="#experience">Explore</a></nav>
+
+<nav>
+  <a class="brand" href="#top">
+    <img src="kaaldarshan-logo.jpeg" alt="KaalDarshan Logo">
+    <span>KAALDARSHAN</span>
+  </a>
+
+  <div class="links">
+    <a href="#vision">Vision</a>
+    <a href="#experience">Experience</a>
+    <a href="#sites">Sites</a>
+    <a href="#technology">Technology</a>
+    <a href="#impact">Impact</a>
+  </div>
+
+  <a class="btn ghost" href="#experience">Explore</a>
+</nav>
 
 <main id="top">
-<section class="hero"><div class="wrap heroGrid"><div>
-<div class="eyebrow">Heritage × Augmented Reality</div>
-<h1>See the past.<br><span class="gold">Where it happened.</span></h1>
-<p>KaalDarshan transforms heritage sites into living historical experiences. Point your Android camera at the place where history unfolded—and experience a carefully reconstructed moment anchored to the real world.</p>
-<div class="actions"><a class="btn primary" href="#experience">Discover the Experience →</a><a class="btn ghost" href="#technology">How it works</a></div>
-</div><div class="logoCard"><img src="kaaldarshan-logo.jpeg" alt="KaalDarshan logo"></div></div></section>
 
-<section id="vision"><div class="wrap"><div class="head"><div class="eyebrow">The idea</div><h2>History should not stay behind glass.</h2><p>Traditional heritage interpretation tells us what happened. KaalDarshan is designed to let visitors understand <em>where</em> it happened and visualize the context in the very space where history unfolded.</p></div>
-<div class="grid"><article class="card"><div class="num">01</div><h3>Location-aware</h3><p>The experience is tied to the heritage site and its meaningful spatial points—not a generic historical video.</p></article>
-<article class="card"><div class="num">02</div><h3>Spatial AR</h3><p>Historical characters, objects and scenes are designed to appear within the visitor's physical environment.</p></article>
-<article class="card"><div class="num">03</div><h3>Source-grounded</h3><p>Historical narratives are built from verified sources and organized into a structured knowledge base.</p></article></div></div></section>
+<section class="hero">
+  <div class="wrap heroGrid">
 
-<section id="experience" class="feature"><div class="wrap two"><div><div class="eyebrow">MVP experience · Jallianwala Bagh</div><h2>One place.<br>One moment.<br><span class="gold">History comes alive.</span></h2><p>The first prototype focuses on a single heritage site and a documented historical narrative. The same architecture can later scale to forts, palaces, observatories and other heritage locations.</p>
-<div class="steps"><div class="step"><span>01</span><div><b>Arrive</b><p>Open KaalDarshan at the heritage site.</p></div></div><div class="step"><span>02</span><div><b>Scan</b><p>Use the camera to establish the visitor's spatial context.</p></div></div><div class="step"><span>03</span><div><b>Reveal</b><p>A historically reconstructed scene appears in the real environment.</p></div></div><div class="step"><span>04</span><div><b>Explore</b><p>Move and look around to discover the story from different viewpoints.</p></div></div></div></div>
-<div><div class="quote">“The place itself becomes the interface to history.”</div><article class="card"><div class="num">AR</div><h3>Designed for Android</h3><p>The prototype is planned around Unity, AR Foundation and ARCore, with spatial experiences optimized for mobile use.</p></article></div></div></section>
+    <div>
+      <div class="eyebrow">Heritage × Augmented Reality</div>
 
-<section id="technology"><div class="wrap"><div class="head"><div class="eyebrow">Under the hood</div><h2>From verified history to spatial experience.</h2><p>KaalDarshan separates historical knowledge from the AR presentation layer, making the system easier to validate, prototype and scale.</p></div>
-<div class="arch"><div><b>Historical Sources</b><span>Reliable references</span></div><div><b>Knowledge Layer</b><span>NotebookLM-assisted research</span></div><div><b>Unity AR</b><span>AR Foundation + ARCore</span></div><div><b>Android</b><span>Camera + spatial experience</span></div></div></div></section>
+      <h1>
+        See the past.<br>
+        <span class="gold">Where it happened.</span>
+      </h1>
 
-<section id="impact"><div class="wrap"><div class="head"><div class="eyebrow">Why KaalDarshan</div><h2>Preserve memory. Deepen learning. Reimagine heritage.</h2></div>
-<div class="grid"><article class="card"><div class="num">01</div><h3>For students</h3><p>Turn textbook events into spatial, memorable learning experiences at the locations where they happened.</p></article><article class="card"><div class="num">02</div><h3>For visitors</h3><p>Move beyond plaques and static displays with contextual storytelling that responds to the place.</p></article><article class="card"><div class="num">03</div><h3>For heritage</h3><p>Create a scalable digital layer that can document and communicate India's diverse historical narratives.</p></article></div></div></section>
+      <p>
+        KaalDarshan transforms heritage sites into living historical experiences.
+        Point your Android camera at the place where history unfolded—and experience
+        a carefully reconstructed moment anchored to the real world.
+      </p>
 
-<div class="cta"><div class="eyebrow">KaalDarshan</div><h2>Past connects.<br><span class="gold">History lives.</span></h2><p>We are building toward an Android AR prototype that lets the physical world reveal the stories embedded within it.</p><a class="btn primary" href="#top">Back to the beginning ↑</a></div>
+      <div class="actions">
+        <a class="btn primary" href="#experience">
+          Discover the Experience →
+        </a>
+
+        <a class="btn ghost" href="#technology">
+          How it works
+        </a>
+      </div>
+    </div>
+
+    <div class="logoCard">
+      <img src="kaaldarshan-logo.jpeg" alt="KaalDarshan">
+    </div>
+
+  </div>
+</section>
+
+
+<section id="vision">
+  <div class="wrap">
+
+    <div class="head">
+      <div class="eyebrow">The idea</div>
+
+      <h2>History should not stay behind glass.</h2>
+
+      <p>
+        Traditional heritage interpretation tells us what happened.
+        KaalDarshan is designed to let visitors understand
+        <em>where</em> it happened and visualize the context in the
+        very space where history unfolded.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="num">01</div>
+        <h3>Location-aware</h3>
+        <p>
+          The experience is tied to the heritage site and its meaningful
+          spatial points—not a generic historical video.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">02</div>
+        <h3>Spatial AR</h3>
+        <p>
+          Historical characters, objects and scenes are designed to appear
+          within the visitor's physical environment.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">03</div>
+        <h3>Source-grounded</h3>
+        <p>
+          Historical narratives are built from verified sources and organized
+          into a structured knowledge base.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="experience" class="feature">
+
+  <div class="wrap two">
+
+    <div>
+
+      <div class="eyebrow">MVP experience · Jallianwala Bagh</div>
+
+      <h2>
+        One place.<br>
+        One moment.<br>
+        <span class="gold">History comes alive.</span>
+      </h2>
+
+      <p>
+        The first prototype focuses on a single heritage site and a documented
+        historical narrative. The same architecture can later scale to forts,
+        palaces, observatories and other heritage locations.
+      </p>
+
+      <div class="steps">
+
+        <div class="step">
+          <span>01</span>
+          <div>
+            <b>Arrive</b>
+            <p>Open KaalDarshan at the heritage site.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span>02</span>
+          <div>
+            <b>Scan</b>
+            <p>Use the camera to establish the visitor's spatial context.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span>03</span>
+          <div>
+            <b>Reveal</b>
+            <p>A historically reconstructed scene appears in the real environment.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <span>04</span>
+          <div>
+            <b>Explore</b>
+            <p>Move and look around to discover the story from different viewpoints.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div>
+
+      <div class="quote">
+        “The place itself becomes the interface to history.”
+      </div>
+
+      <article class="card">
+        <div class="num">AR</div>
+
+        <h3>Designed for Android</h3>
+
+        <p>
+          The prototype is planned around Unity, AR Foundation and ARCore,
+          with spatial experiences optimized for mobile use.
+        </p>
+
+        <button class="btn primary" id="startAR">
+          Enter AR Experience →
+        </button>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="sites">
+
+  <div class="wrap">
+
+    <div class="head">
+      <div class="eyebrow">Explore India's heritage</div>
+
+      <h2>
+        Three places.<br>
+        <span class="gold">Countless stories.</span>
+      </h2>
+
+      <p>
+        KaalDarshan begins with carefully selected heritage locations and
+        can progressively expand into a nationwide immersive heritage layer.
+      </p>
+    </div>
+
+
+    <div class="grid">
+
+      <article class="card siteCard" data-site="jallianwala">
+        <div class="num">01</div>
+
+        <h3>Jallianwala Bagh</h3>
+
+        <p>
+          Experience a spatial reconstruction of the historical events
+          surrounding one of India's most significant freedom movement sites.
+        </p>
+
+        <button class="btn ghost site-btn">
+          Explore Site →
+        </button>
+      </article>
+
+
+      <article class="card siteCard" data-site="mysore">
+        <div class="num">02</div>
+
+        <h3>Mysore Palace</h3>
+
+        <p>
+          Step into the world of the Wadiyar era and visualize royal
+          life, ceremonial spaces and historical moments within the palace.
+        </p>
+
+        <button class="btn ghost site-btn">
+          Explore Site →
+        </button>
+      </article>
+
+
+      <article class="card siteCard" data-site="hampi">
+        <div class="num">03</div>
+
+        <h3>Hampi</h3>
+
+        <p>
+          Reimagine the grandeur of Vijayanagara through immersive scenes,
+          architecture and historical storytelling anchored to the ruins.
+        </p>
+
+        <button class="btn ghost site-btn">
+          Explore Site →
+        </button>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="technology">
+
+  <div class="wrap">
+
+    <div class="head">
+      <div class="eyebrow">Under the hood</div>
+
+      <h2>From verified history to spatial experience.</h2>
+
+      <p>
+        KaalDarshan separates historical knowledge from the AR presentation
+        layer, making the system easier to validate, prototype and scale.
+      </p>
+    </div>
+
+    <div class="arch">
+
+      <div>
+        <b>Historical Sources</b>
+        <span>Reliable references</span>
+      </div>
+
+      <div>
+        <b>Knowledge Layer</b>
+        <span>NotebookLM-assisted research</span>
+      </div>
+
+      <div>
+        <b>Unity AR</b>
+        <span>AR Foundation + ARCore</span>
+      </div>
+
+      <div>
+        <b>Android</b>
+        <span>Camera + spatial experience</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="impact">
+
+  <div class="wrap">
+
+    <div class="head">
+      <div class="eyebrow">Why KaalDarshan</div>
+
+      <h2>
+        Preserve memory. Deepen learning. Reimagine heritage.
+      </h2>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="num">01</div>
+        <h3>For students</h3>
+
+        <p>
+          Turn textbook events into spatial, memorable learning experiences
+          at the locations where they happened.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">02</div>
+        <h3>For visitors</h3>
+
+        <p>
+          Move beyond plaques and static displays with contextual storytelling
+          that responds to the place.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">03</div>
+        <h3>For heritage</h3>
+
+        <p>
+          Create a scalable digital layer that can document and communicate
+          India's diverse historical narratives.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="cta">
+
+  <div class="eyebrow">KaalDarshan · Nexora</div>
+
+  <h2>
+    Past connects.<br>
+    <span class="gold">History lives.</span>
+  </h2>
+
+  <p>
+    We are building toward an Android AR prototype that lets the physical
+    world reveal the stories embedded within it.
+  </p>
+
+  <a class="btn primary" href="#top">
+    Back to the beginning ↑
+  </a>
+
+</div>
+
 </main>
-<footer><span>© 2026 KaalDarshan · Heritage & Culture</span><span>Past connects. History lives.</span></footer>
-</body></html>
+
+
+<footer>
+
+  <span>
+    © 2026 KaalDarshan · Heritage & Culture
+  </span>
+
+  <span>
+    Past connects. History lives.
+  </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
